@@ -1,0 +1,23 @@
+@import '@/lib/reset.scss';
+@import '~antd/dist/antd.css';
+html ,body, #root, .coutainer {
+    overflow-y: auto;
+    @include rect(100%,100%);
+}
+.coutainer{
+        .main{
+            @include rect(1000px,100%);
+            @include margin(0 auto);
+        };
+		@include rect(100%, 100%);
+        .header{
+            @include rect(100%,133px);
+        };
+        .content{
+				@include rect(100%,auto);
+        };
+        .footer{
+            @include rect(100%,320px);
+        };
+
+};

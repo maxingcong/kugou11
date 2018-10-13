@@ -1,0 +1,251 @@
+@import '@/lib/reset.scss';
+.mvTop{
+    .mvBanner{
+        @include rect(663px, 325px);
+        .ant-carousel .slick-dots{
+            right: 12px;
+            bottom: 27px;
+            width: auto;
+        }
+        .ant-carousel .slick-dots li{
+            margin: 0 4px;
+        }
+        .ant-carousel .slick-dots li button{
+            @include rect(10px,10px);
+            border-radius: 50%;
+            @include background-color(#fff);
+            opacity: 1;
+        }
+        .ant-carousel .slick-dots li.slick-active button{
+            @include rect(10px,10px);
+            border-radius: 50%;
+            @include background-color(#85d4f3);
+        }
+        .mvBannerList{
+            .ant-carousel .slick-slide {
+                height: 325px;
+              }
+            img{
+                @include rect(100%,325px);
+            }
+            .mvBannerName{
+                @include rect(100%,40px);
+                background: rgba($color: #000000, $alpha: 0.7);
+                bottom: 0;
+                a{
+                    @include line-height(40px);
+                    @include text-color(#fff);
+                    @include padding(3px 20px 3px 20px);
+                    @include font-weight(800);
+                }
+                em{
+                    @include rect(18px,18px);
+                    @include display(inline-block);
+                    position: relative;
+                    top: 4px;
+                    left: 5px;
+                    // background: url(./../../images/play.png) no-repeat;
+                }
+            }
+        }
+    }
+    .mvHotList{
+        @include rect(317px, 325px);
+        h3{
+            @include line-height(30px);
+            @include font-size(14px);
+            @include rect(100%, 30px);
+            span{
+                @include rect(234px, 30px);
+                @include padding(0 0 0 15px);
+                @include margin(0 1px 0 0);
+                @include background-color(#deb200);
+                @include text-color(#fff);
+                @include font-weight(normal);
+                float:left;
+            }
+            a{
+                @include rect(82px, 30px);
+                @include background-color(#363636);
+                @include text-align(center);
+                @include display(block);
+                @include text-color(#fff);
+                float:left;
+            }
+        }
+        ul{
+            @include background-color(#363636);
+            @include rect(100%,293px);
+            @include margin(1px 0 0 0);
+            li{
+                @include rect(100%,29px);
+                @include line-height(29px);
+                @include text-color(#fff);
+                a{
+                    @include rect(100%,29px);
+                    @include padding(0 0 0 3px);
+                    @include text-color(#fff);
+                    @include display(inline-block);
+                    &:hover{
+                        @include background-color(#959595);
+                        em{
+                            @include rect(18px,18px);
+                            @include display(inline-block);
+                            position: relative;
+                            top: 5px;
+                            right: 50px;
+                            float: right;
+                            // background: url(./../../images/play.png) no-repeat
+                        }
+                    }
+                    .num{
+                        @include rect(37px,29px);
+                        @include display(inline-block);
+                        @include text-align(center);
+                        font-style: italic;
+                        @include text-color(#ccc);
+                        &:nth-child(1),&:nth-child(2),&:nth-child(3) {
+                            @include text-color(#fff);
+                        }
+                    }
+                    .name{
+                        span{
+                            @include ellipsis(120px,1);
+                            @include display(inline-block);
+                            float: left;
+                        }
+                        i{
+                            float: left;
+                            @include display(inline-block);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.mvContent{
+    @include margin(18px 0 0 0);
+    .mv_left{
+        @include rect(210px,auto);
+        ul{
+            @include margin(10px 0 0 0);
+            li{
+                @include rect(210px,36px);
+                @include text-align(center);
+                a{
+                    @include rect(210px,36px);
+                    @include line-height(36px);
+                    @include text-color(#555);
+                    @include display(inline-block);
+                    &:hover,{
+                        @include background-color(#85d4f3);
+                        @include text-color(#fff);
+                    }
+                }
+                &:first-child{
+                    @include background-color(#85d4f3);
+                    a{
+                        @include text-color(#fff);
+                    }
+                }
+            }
+        }
+    }
+    .mv_right{
+        @include rect(780px,auto);
+    }
+}
+.mvlist{
+    ul{
+        @include margin(10px 0 0 0);
+        li{
+            @include rect(140px,110px);
+            // @include position(relative);
+            position: relative;
+            @include margin(0px  20px 10px 0px);
+            float: left;
+            a{
+                img{
+                    @include rect(140px,78px);
+                }
+                em{
+                    @include rect(22px,22px);
+                    @include display(inline-block);
+                    // @include position();
+                    position: absolute;
+                    bottom: 44px;
+                    right: 15px;
+                    // background: url(./../../images/play_icon.png) no-repeat;
+                }
+                i{
+                    // background: url(./../../images/btn_bg.png) no-repeat;
+                    // @include position();
+                    position: absolute;
+                    @include rect(140px,44px);
+                    left: 0;
+                    top: 35px;
+                }
+            }
+            span{
+                @include ellipsis(124px, 1);
+                @include text-color(#555);
+                @include margin(5px 0 0 3px);
+                @include display();
+                height: 20px;
+                em{
+                    float: left;
+                }
+                i{
+                    float: left;
+                    @include ellipsis(73px,1)
+                }
+            }
+            &:nth-child(5n){
+                @include margin(0px  0 10px 0px);
+            }
+        }
+    }
+}
+.title{
+    @include rect(100%,30px);
+    @include line-height(30px);
+    @include background-color(#cfcfcf);
+    @include text-align(center);
+    @include font-size(16px);
+    @include text-color(#333);
+    @include font-weight(normal);
+}
+.page{
+    @include margin(20px 0 30px 0);
+    @include rect(100%, 40px);
+    ul{
+        float: right;
+        li{
+            @include border(1px, #d9d9d9, solid, 4px);
+            @include margin(0 5px 0 0);
+            @include padding(3px 4px);
+            @include rect(30px, auto);
+            text-align: center;
+            float: left;
+            &.pre,&.next{
+                @include rect(50px, auto)
+            }
+            a{
+                @include text-color(#666);
+                @include font-size(12px);
+                &:hover{
+                    @include text-color(#1890ff);
+                }
+            }
+            &:hover{
+                @include border(1px, #1890ff, solid, 4px);
+            }
+        }
+    }
+}
+
+
+
+
+

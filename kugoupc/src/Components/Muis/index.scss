@@ -1,0 +1,147 @@
+@import '@/lib/reset.scss';
+.main{
+    @include rect(1000px,100%);
+    @include margin(0 auto);
+};
+.ant-progress-show-info .ant-progress-outer{
+    padding-right: 0;
+}
+.MuisBox{
+    position: relative;
+    @include rect(100%,100%);
+    overflow-y: hidden;
+    .boxlist{
+        background: url(../../images/bj1.jpg) no-repeat;
+        background-size: 100% 100%;
+        @include rect(100%,100%);
+        .Box{
+            @include flexbox();
+            @include rect(100%,100%);
+            justify-content: center;
+            .Muislyric{
+                position: relative;
+                @include rect(840px,100%);
+               color: yellowgreen;
+                .Muisboxleft{
+                    @include rect(380px,100%);
+                    position: absolute;
+                    padding-top: 10px;
+                    left: 0;
+                    img{
+                        @include rect(260px,260px);
+                        margin-bottom: 30px;
+                    };
+                    p{
+                        color: #fff;
+                        @include rect(230px,50px);
+                        border: 1px solid #999;
+                        border-radius:26px;
+                        line-height: 50px;
+                        text-align: center;
+                        cursor: pointer;
+                        font-size: 20px;
+                        font-weight: normal;
+                    }
+                    
+                };
+                .Muisboxright{
+                    @include rect(460px,100%);
+                    position: absolute;
+                    right: 0;
+                    b{
+                        font-size: 20px;
+                        line-height: 36px;
+                        color: #fff;
+                    }
+                    .Muisboxrighttop{
+                        @include flexbox();
+                        justify-content: space-between;
+                        @include rect(100%,33px);
+                        margin-top: 10px;
+                       
+                        p{
+                            @include rect(225px,auto);
+                            span{
+                                color: #fff;
+                            }
+                        }
+                    };
+                    .Muisboxrightbtm{
+                        @include rect(460px,260px);
+                        overflow: hidden;
+
+                        color: #fff;
+                        ul{
+                            position: relative;
+                            li{
+                                line-height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+    .Muisbtmbox{
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        background-color: #000;
+        @include rect(100%,80px);
+        opacity: 0.8;
+       .Muisbtmboxs{
+           position: relative;
+           @include rect(100%,80px);
+           @include flexbox();
+           align-items: center;
+           .control{
+               @include rect(180px,100%);
+               @include flexbox();
+               justify-content: space-between;
+               align-items: center;
+               cursor: pointer;
+               span{
+                   font-size: 48px;
+                   color: #fff;
+                   &:nth-child(2){
+                    font-size: 56px;
+                   }
+               };
+
+           };
+           .portrait{
+
+               img{
+                   @include rect(60px,60px);
+                   margin:10px 45px;
+               }
+           };
+           .progress{
+               .ant-progress-outer{
+                   width: 370px;
+               };
+               p{
+                   @include flexbox();
+                   justify-content: space-between;
+                   
+               }
+
+           };
+           .controlrigth{
+            @include flexbox();
+            align-items: center;
+            @include rect(auto,80px);
+               position: absolute;
+               right: 0;
+               span{
+                    font-size: 22px;
+                    margin-left: 20px;
+                    cursor: pointer;
+                    &:nth-child(1){
+                        font-size:28px;
+                    }
+               }
+           }
+       }
+    }
+}

@@ -1,0 +1,111 @@
+@import '@/lib/reset.scss';
+.mvVideo{
+    h2{
+        @include rect(100%, 27px);
+        @include line-height(27px);
+        @include text-color(#878787);
+    }
+    .player{
+        @include rect(100%, 500px);
+        @include background-color(#666);
+    }
+    .toobar{
+        @include rect(100%, auto);
+        @include line-height(38px);
+        @include text-color(#878787);
+        @include background-color(#25292c);
+        @include padding(15px 20px);
+        .mvTitle{
+            @include rect(740px, auto);
+            @include ellipsis(740px, 1);
+            @include text-color(#fff);
+        }
+        .mvAction{
+            @include position(relative);
+            @include rect(210px, 20px);
+            @include line-height(20px);
+            @include padding(9px 0 9px 35px);
+            a{
+                @include text-color(#666);
+                @include margin(0 0 0 22px);
+            }
+            em{
+                @include font-size(22px);
+                @include text-color(#999);
+            }
+        }
+        
+    }
+    .mvlike{
+        @include rect(100%, 67px);
+        @include line-height(67px);
+        @include text-color(#878787);
+        @include font-weight(800);
+    }
+}
+.ant-popover-inner,.ant-popover-placement-top > .ant-popover-content > .ant-popover-arrow{
+    @include background-color(#000);
+    @include text-align(center);
+    p{
+        @include text-color(#999);
+        @include line-height(20px);
+        @include margin(0 0 4px 0);
+    }
+}
+.ant-popover-title{
+    @include display(none);
+}
+.mvdetailbo{
+    ul{
+        @include margin(0px);
+        li{
+            @include margin(0px  32px 10px 0px);
+            &:nth-child(5n){
+                margin-right: 30px
+            }
+            &:nth-child(6n){
+                margin-right: 0
+            }
+        }
+    }
+}
+.shareBtn{
+    @include rect(475px, 308px);
+    @include background-color(#fff);
+    @include position();
+    top: 50%;
+    left: 50%;
+    margin-left: -237px;
+    margin-top: -154px;
+    z-index: 999;
+    .title{
+        @include background-color(#2c323b);
+        @include rect(100%, 36px);
+        @include text-color(#fff);
+        @include text-align(left);
+        @include position(relative);
+        @include line-height(36px);
+        @include padding(0 0 0 20px);
+        @include font-size(13px);
+        em{
+            @include position();
+            top: 0;
+            right: 15px;
+            cursor: pointer;
+        }
+    }
+    ul{
+        @include padding(20px);
+        @include rect(475px, 272px);
+        li{
+            float: left;
+            @include padding(70px 22px);
+            p{
+                @include font-size(13px);
+                @include text-align(center);
+                @include line-height(35px);
+            }
+        }
+    }
+}
+

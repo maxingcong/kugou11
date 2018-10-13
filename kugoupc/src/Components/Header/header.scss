@@ -1,0 +1,116 @@
+@import '@/lib/reset.scss';
+html ,body, #app, .coutainer,.header{
+    .headertop{
+        @include flexbox();
+        @include align-items(center);
+        justify-content: space-between;
+        height: 78px;
+        img{
+            @include rect(153px,37px);
+        }
+        .headeript{
+            @include rect(300px,36px);
+            @include border(1px);
+            input{
+                @include rect(250px,100%);
+                @include margin(0 0 0 14px);
+                @include padding(5px 0);
+                border: none;
+            };
+            span{
+                display: inline-block;
+                @include rect(34px,34px);
+                text-align: center;
+                align-items: center;
+                cursor: pointer;
+                
+            }
+        };
+        ul{
+            @include rect(auto,19px);
+            @include flexbox();
+            li{
+                @include padding(0 15px);
+                a{
+                    @include text-color(#777);
+                }
+            }
+        };
+        .loginbtn{
+            a{
+                @include rect(50px,30px);
+                text-align: center;
+                line-height: 30px;
+                display: inline-block;
+                &:nth-child(1){
+                    @include  background-color(#158fe1);
+                    @include text-color(#fff);
+                    border-radius: 2px;
+                };
+                &:nth-child(2){
+                    @include margin(0 0 0 14px);
+                    @include border(1px);
+                    @include text-color(#333);
+                }
+            }
+        }
+    };
+    .navWrap{
+        @include rect(100%,55px);
+        @include  background-color(#2c323b);
+        .navlist{
+            @include flexbox();
+            justify-content: space-between;
+            ul{
+                @include rect(100%,100%);
+                @include flexbox();
+                @include align-items(center);
+                li{
+                    &:nth-child(4){
+                        span{
+                            margin-left: 10px;
+                        }
+                    }
+                    a{
+                        line-height: 55px;
+                        @include padding(0 30px);
+                        display: block;
+                        color: #fff;
+                        &:active {
+                            @include text-color(#f66);
+                        }
+                        
+                    };
+                    :hover{
+                        background-color: #0c8ed9;
+                    }
+                }
+            };
+            ol{
+                @include rect(100%,100%);
+                @include align-items(center);
+                justify-content: flex-end;
+                @include flexbox();
+                font-size: 13px;
+                
+                li{
+                    @include flexbox();
+                    margin-left: 30px;
+                    i{
+                        margin-left: 5px;
+                    }
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+
+
+

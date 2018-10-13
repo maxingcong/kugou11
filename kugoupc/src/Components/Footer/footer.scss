@@ -1,0 +1,46 @@
+@import '@/lib/reset.scss';
+.footer{
+
+    @include background-color(#2c323b);
+    .footerbox{
+        border-bottom: 1px solid #3d424a;
+        margin-bottom: 40px;
+    }
+    .footercontent{
+        .footernav{
+            ul{
+                @include flexbox();
+                @include rect(100%,49px);
+                justify-content: center;
+                li{
+                    color: #b1b3b9;
+                    line-height: 49px;
+                    cursor: pointer;
+                    span{
+                        font-size: 14px;
+                        padding: 0 8px;
+                        border-right: 1px solid #b1b3b9;
+                        
+                    }
+                    &:nth-last-child(1){
+                        span{
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+    };
+    .footerlist{
+        text-align: center;
+        color: #b1b3b9;
+        font-size: 14px;
+        line-height: 30px;
+        p{
+            img{
+                margin-left: 10px;
+            }
+        }
+    };
+}
